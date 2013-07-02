@@ -1,0 +1,8 @@
+<!-- displays a standalone notebook -->
+{% extends "page.html" %}
+{% block stylesheets %}
+    {{ super() }}
+    {% if EXTRA_HEADER %}
+        {{ EXTRA_HEADER }}
+    {% endif %}
+{% endblock stylesheets %}
