@@ -1,0 +1,11 @@
+{% extends "page.html" %}
+
+{% macro code_snippet(url, filename, description) -%}
+<h3 style="display: inline"><a href = "https://gist.github.com/{{ url }}">{{ filename }}</a></h3><br>
+<div id="codedesc">{{ description }}</div>
+{%- endmacro %}
+
+{% macro code_project(projpage, projname, source, description) -%}
+<h3 style="display: inline"><a href = "{{ projpage }}">{{ projname }}</a></h3> [<a href="{{ source }}">Source</a>]<br>
+<div id="codedesc">{{ description }}</div>
+{%- endmacro %}
