@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% block stylesheets %}
+    {{ super() }}
+    {% if EXTRA_HEADER %}
+        {{ EXTRA_HEADER }}
+    {% endif %}
+{% endblock stylesheets %}
 {% block content_title %}{% endblock %}
 {% block content %}
 {% if articles %}
